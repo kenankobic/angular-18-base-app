@@ -1,0 +1,14 @@
+<div class="flex justify-start items-start w-full">
+    <app-sidebar></app-sidebar>
+    <div class="min-h-screen w-full flex flex-col px-4">
+        <div class="h-16 flex items-center">
+            <mat-icon class="cursor-pointer duration-200" [ngClass]="{'rotate-180': !layoutService.menuOpen()}"
+                (click)="toggleMenu()">
+                menu_open
+            </mat-icon>
+        </div>
+        <div class="h-full w-full">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
